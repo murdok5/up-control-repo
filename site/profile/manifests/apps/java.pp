@@ -7,9 +7,9 @@ class profile::apps::java {
     java_se => 'jdk',
   }
 
-  file { '/usr/java/latest':
-    ensure  => link,
-    target  => "${::java_default_home}",
-    require => Java::Oracle['jdk8'],
-  }
+#  file { '/usr/java/latest':
+#    ensure  => link,
+#    target  => "${::java_default_home}",
+#    require => Java::Oracle['jdk8'],
+#  }
 }
