@@ -18,7 +18,7 @@ mod 'puppetlabs-tomcat', '2.3.0'
 mod 'puppetlabs-java', '2.4.0'
 mod 'puppet-archive', '3.0.0'
 mod 'tspy-code_deploy', '1.0.2'
-
+mod 'puppetlabs-exec', '0.2.0'
 
 
 # Modules from Git
