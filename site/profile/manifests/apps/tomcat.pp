@@ -23,6 +23,12 @@ class profile::apps::tomcat {
   tomcat::war { 'hello-world.war':
     war_source    => 'https://github.com/efsavage/hello-world-war/blob/master/dist/hello-world.war',
     catalina_base => '/opt/tomcat8',
+    require => File['/opt/tomcat8/webapps/hello-world'],
+  }
+  file { '/opt/tomcat8/webapps/hello-world':
+    ensure => 'directory',
+    owner  => 'tomcat',
+    group  => 'tomcat',
   }
 #  file { '/opt/tomcat8/webapps/hello-world.war':
 #    ensure => 'present',
