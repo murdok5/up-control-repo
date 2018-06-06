@@ -23,5 +23,7 @@ class profile::apps::tomcat {
   file { '/opt/tomcat8/webapps/hello-world.war':
     ensure => 'present',
     source => 'https://github.com/efsavage/hello-world-war/blob/master/dist/hello-world.war',
+    owner  => 'tomcat',
+    group  => 'tomcat',
   }
 }
