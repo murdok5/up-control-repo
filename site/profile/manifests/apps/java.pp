@@ -1,3 +1,4 @@
+# blah blah blah
 class profile::apps::java {
 
   java::oracle { 'jdk8' :
@@ -9,6 +10,6 @@ class profile::apps::java {
   file { '/usr/java/latest':
     ensure  => link,
     target  => "${::java_default_home}",
-    require => Class[Java::Oracle],
+    require => Java::Oracle['jdk8'],
   }
 }
