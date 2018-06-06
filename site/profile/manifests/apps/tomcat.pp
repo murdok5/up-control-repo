@@ -19,4 +19,9 @@ class profile::apps::tomcat {
       'redirectPort' => '8543'
     },
   }
+
+  file { '/opt/tomcat8/webapps/hello-world.war':
+    ensure => 'present',
+    source => 'https://github.com/efsavage/hello-world-war/blob/master/dist/hello-world.war',
+  }
 }
