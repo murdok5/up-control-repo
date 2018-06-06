@@ -9,10 +9,16 @@ mod 'puppetlabs-powershell', '2.1.5'
 mod 'puppetlabs-ntp', '7.1.1'
 mod 'puppetlabs-vcsrepo', '2.3.0'
 mod 'puppetlabs-pe_gem', '0.2.0'
+mod 'saz-timezone', '4.1.1'
+mod 'stm-debconf', '2.2.0'
+mod 'saz-sudo', '5.0.0'
+mod 'puppet-selinux', '1.5.2'
+mod 'waveclaw-subscription_manager', '3.3.3'
 mod 'puppetlabs-tomcat', '2.3.0'
 mod 'puppetlabs-java', '2.4.0'
 mod 'puppet-archive', '3.0.0'
 mod 'tspy-code_deploy', '1.0.2'
+
 
 
 # Modules from Git
