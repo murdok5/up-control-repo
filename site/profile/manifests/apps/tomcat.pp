@@ -1,18 +1,22 @@
 # here is a comment
 class profile::apps::tomcat {
-  tomcat::install { '/opt/tomcat':
+  tomcat::install { '/opt/tomcat8':
     source_url => 'https://www-us.apache.org/dist/tomcat/tomcat-8/v8.5.31/bin/apache-tomcat-8.5.31.tar.gz',
   }
-  tomcat::instance { 'default':
-    catalina_home => '/opt/tomcat',
+
+  tomcat::instance { 'tomcat8':
+    catalina_home => '/opt/tomcat8',
   }
-  tomcat::config::server { 'default':
-    catalina_base => '/opt/tomcat',
-    port          => '80',
+  tomcat::config::server { 'tomcat8':
+    catalina_base => '/opt/tomcat8',
+    port          => '8105',
   }
-  tomcat::config::server::connector { 'default-connector':
-    catalina_base         => '/opt/tomcat',
-    port                  => '8081',
+  tomcat::config::server::connector { 'tomcat8-http':
+    catalina_base         => '/opt/tomcat8',
+    port                  => '8180',
     protocol              => 'HTTP/1.1',
+    additional_attributes => {
+      'redirectPort' => '8543'
+    },
   }
 }
