@@ -6,8 +6,9 @@ class profile::apps::tomcat {
   tomcat::instance { 'default':
     catalina_home => '/opt/tomcat',
   }
-  tomcat::config::server { 'default':
-    catalina_base => '/opt/tomcat',
-    port          => '80',
+  tomcat::config::server::connector { 'default':
+    catalina_base         => '/opt/tomcat',
+    port                  => '80',
+    protocol              => 'HTTP/1.1',
   }
 }
