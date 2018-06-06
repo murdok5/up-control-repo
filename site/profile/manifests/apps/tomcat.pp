@@ -20,10 +20,14 @@ class profile::apps::tomcat {
     },
   }
 
-  file { '/opt/tomcat8/webapps/hello-world.war':
-    ensure => 'present',
-    source => 'https://github.com/efsavage/hello-world-war/blob/master/dist/hello-world.war',
-    owner  => 'tomcat',
-    group  => 'tomcat',
+  tomcat::war { 'hello-world.war':
+    war_source    => 'https://github.com/efsavage/hello-world-war/blob/master/dist/hello-world.war',
+    catalina_base => '/opt/tomcat8',
   }
+#  file { '/opt/tomcat8/webapps/hello-world.war':
+#    ensure => 'present',
+#    source => 'https://github.com/efsavage/hello-world-war/blob/master/dist/hello-world.war',
+#    owner  => 'tomcat',
+#    group  => 'tomcat',
+#  }
 }
