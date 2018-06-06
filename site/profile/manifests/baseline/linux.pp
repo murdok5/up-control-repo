@@ -1,1 +1,3 @@
+class profile::baseline::linux {
 
+}
