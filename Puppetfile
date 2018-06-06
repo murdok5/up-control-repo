@@ -11,6 +11,7 @@ mod 'puppetlabs-vcsrepo', '2.3.0'
 mod 'puppetlabs-pe_gem', '0.2.0'
 mod 'puppetlabs-tomcat', '2.3.0'
 mod 'puppetlabs-java', '2.4.0'
+mod 'puppet-archive', '3.0.0'
 
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
